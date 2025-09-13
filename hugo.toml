@@ -1,0 +1,65 @@
+baseURL = "https://Rufine777.github.io/"
+languageCode = "en-US"
+title = "Ajul's Portfolio"
+theme = "hugo-split-theme"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "RSS", "sitemap"]
+disableHugoGeneratorInject = true
+relativeURLs = true
+canonifyURLs = false
+copyright = "© 2024 Ajul T. M"
+
+[services]
+  [services.googleAnalytics]
+    ID = ""
+
+[params]
+  author = "Ajul T. M"
+  description = "Portfolio site for AI & CSE projects"
+  shareImage = "images/pfp.png"
+  twitterHandle = ""
+  licensed = false
+  favicon = "images/pfp.png"
+
+  [params.visual]
+    [params.visual.image]
+      enable = true
+      file = "images/pfp.png"
+      position = "center center"
+    [params.visual.video]
+      enable = false
+      mute = true
+      file = "videos/background.mp4"
+
+# Primary navigation — each page is separate
+[[params.links.list1]]
+  text = "About"
+  url = "/about/"
+  new_tab = false
+
+[[params.links.list1]]
+  text = "Projects & Achievements"
+  url = "/projects/"
+  new_tab = false
+
+[[params.links.list1]]
+  text = "Resources"
+  url = "/resources/"
+  new_tab = false
+
+[[params.links.list1]]
+  text = "Contact"
+  url = "/contact/"
+  new_tab = false
+
+# Security headers for server
+[server]
+  [[server.headers]]
+    for = "/**"
+    [server.headers.values]
+      Content-Security-Policy = "default-src 'self' https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;"
+      Referrer-Policy = "strict-origin-when-cross-origin"
+      X-Content-Type-Options = "nosniff"
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+
