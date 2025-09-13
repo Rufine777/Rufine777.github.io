@@ -1,14 +1,14 @@
-baseURL = "https://Rufine777.github.io/"
+baseURL = "https://Rufine777.github.io/Praveshan-2025/"
 languageCode = "en-US"
 title = "Ajul's Portfolio"
 theme = "hugo-split-theme"
 enableRobotsTXT = true
-disableKinds = ["taxonomy", "RSS", "sitemap"]
-disableHugoGeneratorInject = true
-relativeURLs = true
-canonifyURLs = false
-copyright = "© 2024 Ajul T. M"
+relativeURLs = false
+canonifyURLs = true
+disableKinds = ["taxonomy", "RSS"] # keeps site clean
+copyright = "© 2025 Ajul T. M"
 
+# Google Analytics (optional — leave empty if not used)
 [services]
   [services.googleAnalytics]
     ID = ""
@@ -17,7 +17,7 @@ copyright = "© 2024 Ajul T. M"
   author = "Ajul T. M"
   description = "Portfolio site for AI & CSE projects"
   shareImage = "images/pfp.png"
-  twitterHandle = ""
+  twitterHandle = "" # add later if needed
   licensed = false
   favicon = "images/pfp.png"
 
@@ -31,28 +31,28 @@ copyright = "© 2024 Ajul T. M"
       mute = true
       file = "videos/background.mp4"
 
-# Primary navigation — each page is separate
-[[params.links.list1]]
-  text = "About"
+# Navigation Menu (matches your content/*.md files)
+[[menu.main]]
+  name = "About Me"
   url = "/about/"
-  new_tab = false
+  weight = 1
 
-[[params.links.list1]]
-  text = "Projects & Achievements"
+[[menu.main]]
+  name = "Projects & Achievements"
   url = "/projects/"
-  new_tab = false
+  weight = 2
 
-[[params.links.list1]]
-  text = "Resources"
+[[menu.main]]
+  name = "Resources"
   url = "/resources/"
-  new_tab = false
+  weight = 3
 
-[[params.links.list1]]
-  text = "Contact"
+[[menu.main]]
+  name = "Contact Me"
   url = "/contact/"
-  new_tab = false
+  weight = 4
 
-# Security headers for server
+# Security headers (safe defaults for GitHub Pages)
 [server]
   [[server.headers]]
     for = "/**"
