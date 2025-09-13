@@ -15,6 +15,4 @@ git add .
 git commit -m "Deploy updated site" 2>/dev/null
 
 # 5. Push to GitHub
-git push origin main#!/bin/bash
-
-
+git push origin main
